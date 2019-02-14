@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+
+    public delegate string MyDelegate(int arg1, int arg2);
+    // declare the delegate tye
+
+     class MyClass
+    {
+        //declare can be bound to instance members as well as 
+        //static class funcitions. 
+        public string instanceMethod1(int arg1, int arg2)
+        {
+            return ((arg1 + arg2) * arg1).ToString(); //işlem tanımladık ve bu işlemi stringe çevirdik. 
+
+        }
+    }
+
+
+    class Program
+    {
+        static string funct1(int a, int b)
+        {
+            return (a + b).ToString();
+
+        }
+        static string funct2(int a, int b)
+        {
+            return (a * b).ToString();
+        }
+        static void Main(string[] args)
+        {
+            MyDelegate f = funct1;
+            Console.WriteLine("The number is: " + f(10, 200));
+            Console.WriteLine(" ");
+            f = funct2;
+            Console.Write("The number is: " + f(10, 200));
+            Console.Write(" ");
+
+
+            MyClass mc=new MyClass();
+            f = mc.instanceMethod1;
+            Console.Write("The number is :" + f(10, 200));
+            Console.WriteLine(" ");
+            Console.WriteLine("\n Press Enter to Continue...");
+            Console.WriteLine(" ");
+            Console.ReadLine();
+
+        }
+    }
+}
+    
+    
+  

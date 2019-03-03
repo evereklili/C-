@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace HesapMakinesi
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RakamDugme_Click(object sender, EventArgs e)
+        {
+            Button rakamDugme;  //tıklanan düğmeyi referans olarak kullanılacaktır. 
+            rakamDugme = (Button)sender;
+            lblEkran.Text += rakamDugme.Text;
+
+
+        }
+        private void IslemDugme_Click(object sender, EventArgs e)
+        {
+            char[] ayiraclar = new char[] {'+'}; // burada ayıraç olarak kullanacağımız yer olarak da  
+            string[] strSayilar;
+            strSayilar = lblEkran.Text.Split(ayiraclar);
+            int toplam = 0;
+            foreach(string strSayi in strSayilar)
+            {
+                toplam += Convert.ToInt32(strSayilar);
+            }
+            lblEkran.Text = toplam.ToString();
+
+
+
+        }
+    }
+}
+
+
+  

@@ -1,0 +1,66 @@
+using System; //bir kütğphanenin eklenmesi gerekir. using c# dahil edilmesini kapsamaktadır. Kütüphaneleri buraya ekleyebiliriz. 
+
+
+namespace ConsoleApp1
+{
+    class Program   //bütün yazacağımız kodlar klass içinde olmalıdır. Class bir sınıf ufak bahsedelim.  Bir cl
+    {
+        static void Main(string[] args)  //bir class içinde main varsa ilk program buradan başlar. özel bir fonksiyondur. static  ve void olur. önceliğe sahiptir.Run anlamında. Obje anlamında ise Constructur başlar. 
+        {
+            Console.WriteLine("Hello World! \n Dünya merhaba; \t türkiye.gov.tr \r kayseri");  //console.writeline dediğimizde c# gördüğünüz iki tırnak arasındaki dizgiyi ekrana bastırır. 
+                                                                                               //c# küçük büyük harflere duyarlıdır. C# ait olan komut ve yapılar kullanılamaz. İyi kod yazmak için curve bracket dengeli olması gerekmetedir. İç içe yapılar dengede olmalıdır. 
+
+            string kisi = "ömer doğu"; //variable that stores the string Ömer 
+            Console.WriteLine($"Welcome to C# Programming, {kisi}"); //c# olan bir yapdır. bunun adı interpolasyondur. 
+            int number1; //declare first number to add
+            int number2;  //declare second number to add
+            int sum;  //declare sum of number1 and number2
+
+            Console.WriteLine("Enter first integer"); //prompt user
+            //read first number from user
+            number1 = int.Parse(Console.ReadLine());
+            number2 = int.Parse(Console.ReadLine());
+            Console.Write(number1 + number2);
+            Console.Write(number1 - number2);
+            Console.Write(number1 * number2);
+            Console.Write(number1 / number2);
+            Console.Write(number1 % number2);
+            Console.Write(number1 < number2);
+            Console.Write(number1 > number2);
+            Console.Write(number1 <= number2);
+            Console.Write(number1 >=number2);
+            Console.Write(number1 == number2);
+            Console.Write(number1 !=number2);
+
+            Console.Write(number1 + number2);
+
+
+
+
+
+
+        }
+    }
+}
+// Görsel programlama ile arka plan kodlama farklılıdır. Bazı temel kavramlara bakacağız. Basit bir tane konsol uygulmasına bakalım. 
+// Başlarsak yorum satırıdır c# bunları atlar ve bunlar bizim notlarımızdır. Bazı keywordlar var bunları amacından kullanmalıyız. class ismini mesela long kullanılamaz! 
+//   çift tırnak içinde yazılan yerlerde \n ---> new line anlamındadır. 
+/*
+ * \t tab manaındadır. 
+ * \" -> horizantal manasındadır. 
+ * \\ -> \ karakteri bastırır. 
+ * 
+ * 
+ * Hello World!
+kayserierhaba;          türkiye.gov.tr
+Welcome to      C# Programming, ömer dogu
+Enter first integer
+15
+10
+25515015FalseTrueFalseTrueFalseTrue25
+C:\Program Files\dotnet\dotnet.exe (process 11164) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . .
+ */
+
+

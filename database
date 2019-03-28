@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data; //Veri tabanları için kullanırız. 
+using System.Data.SqlClient; // Veri tabanları için eklendi. !  
+namespace WindowsFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            Close();
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+           
+            /* string v_adi, v_soyadi, v_b_adi, v_a_adi,v_d_yeri,v_notlar,v_sinifi,v_bolumu;
+            int v_id_no;
+            DateTime 
+            SqlConnection baglanti = new SqlConnection("DataBindings Source=GAYSERILI;Initial Catalog=Personel;Security=True");
+            //SqlCommand nesne_adi=new SqlCommand(sorgu,baglanti_adi); sqlCommand sınıfının methodlarını kullanarak oluşturduğumuz sorguyu çalıştırabiliriz. 
+            //sorgu tanımlamak için SqlCommand yapıcı methodu kullanılır. 
+            //SqlCommand komut = new SqlCommand("select *from kisiselBilgiler", baglanti); //select... bağlantım var.o nerede çalışacak. 
+                                                                                         //oluşturduğumuz sorguyu çalıştırmak için SqlCommand sınıfının şu dört methodundan birini kullanabiliriz. 
+                                                                                         //ExecuteNonQuery= sonrgu sonucu sonucu dönen değer yoksa çalışır. insert, delete ve update sorgularını bu method ile çalıştırırırz. 
+                                                                                         //ExecuteReader= bir sorgu sonucunda geriye değerler dönecekse executereader methodu ile sorgumuzu çalıştırırız. select sorgu sonucu bir şeyler gelmesi gerekir.
+                                                                                         //ExecuteScalar sorgu sonucu geriye tek değer dönecekse, bu sorguyu executescalar medhodu ile çalıştırırız. Tablodaki kayıt sayısını bulmak istiyorsak, bu sorguyu executeScalar ile çalıştırıırz. Kayıt sayısını count ile bulurz. 
+                                                                                         //ExecuteXmlReader tipinde veri okumak için kullanırız. 
+            //komut.ExecuteReader();
+            SqlCommand komut2 = new SqlCommand("insert into Personel;values()", baglanti);
+            v_adi = textBox1.Text;
+            v_soyadi = textBox2.Text;
+            v_b_adi = textBox3.Text;
+            v_a_adi = textBox4.Text;
+            v_
+            SqlCommand komut = new SqlCommand("insert into Personel values('"+adi+"','"+soyadi+"','"+b_adi+"','"+a_adi+"')", baglanti);
+            baglanti.Open();
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            textBox1.Text = ""
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            //Farklı bir başka örnek olsun. 
+            */
+
+        }
+
+        private void TabloBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tabloBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.ogrenciDataSet);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'ogrenciDataSet.tablo' table. You can move, or remove it, as needed.
+            this.tabloTableAdapter.Fill(this.ogrenciDataSet.tablo);
+
+        }
+    }
+}
+
+
+/*
+
+// SqlConnection nesne_adi=new SqlConnection("Data Source=sunucu_adi eya ip adresi, Initial  Catalog=Veritabani_adi;Integrated Security=True" 
+// SqlConnection nesnesi ile bağlanmak istediğimiz sunucuyu ve bağlanmak istediğimiz sunucuyu ve güvenlik ayarlarını yaparız. 
+//nesne başlangıç noktası. data bağlanmak istediğimiz ip adresini yazarız  kullanıcı adı ve şfire gerekmediğinde Integrated Security=True;
+
+    //SlqConnection nesne_adi=new SqlConnection("Data Source=GAY
+    */
+
+    //listBox1.Items.Clear();
+    /*
+     * komut=new SqlCommand("Select * from gorse2",baglanti);
+     * SqlDataReader oku=new SqlReaer
+     */

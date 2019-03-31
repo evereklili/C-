@@ -1,0 +1,33 @@
+using System; //bir kütğphanenin eklenmesi gerekir. using c# dahil edilmesini kapsamaktadır. Kütüphaneleri buraya ekleyebiliriz. 
+
+
+namespace ConsoleApp1
+{
+    class Omer//class ismi ile program ismi aynı olmak zorunda değidir!
+    {
+        static void Main(string[] args)
+        {
+
+            int n1, n2, n3;
+            Console.Write("üç tane tam sayı girniz.:");
+            n1 = int.Parse(Console.ReadLine());
+            n2 = int.Parse(Console.ReadLine());
+            n3 = int.Parse(Console.ReadLine());
+            if(n1==n2)
+            {
+                Console.Write($"Sayılar eşittir : {n1}={n2}");
+            }
+            if(n1==n3)
+            {
+                Console.Write($"Sayılar eşittir : {n1}={n3}");
+            }
+            if(n2==n3)
+            {
+                Console.Write($"Sayılar eşittir : {n3}={n2}");
+            }
+
+        }
+                 
+
+    }
+}

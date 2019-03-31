@@ -1,0 +1,40 @@
+using System; //bir kütğphanenin eklenmesi gerekir. using c# dahil edilmesini kapsamaktadır. Kütüphaneleri buraya ekleyebiliriz. 
+
+
+namespace ConsoleApp1
+{
+    class Omer//class ismi ile program ismi aynı olmak zorunda değidir!
+    {
+        static void Main(string[] args)  //bir class içinde main varsa ilk program buradan başlar. özel bir fonksiyondur. static  ve void olur. önceliğe sahiptir.Run anlamında. Obje anlamında ise Constructur başlar.  Javada aynı olmak zorunadır. 
+        { //main blogu başlıyor. Main fonksiyon ismi kesinlikle Main olarak yazılmalıdır. 
+            //file new console application oluşturuyoruz. 
+            Console.WriteLine("ÖMER DOĞU");
+
+
+            //main blogu bitiyor. 
+            /*
+             * 
+             * birden fazla satır yorum yapabiliriz. 
+             * */
+            //resered keywordler kullanılamaz. Build ederken error verir. 
+
+            int n1, n2, n3;
+            Console.WriteLine("Lütfen bir sayı giriniz:");
+            n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Lütfen ikinci sayıyı giriniz:");
+            n2 = int.Parse(Console.ReadLine());
+            n3 = n1 + n2;
+            Console.WriteLine($"Sayılarınızın toplam değeri:{n3}");
+            
+
+
+
+
+        }
+    
+
+
+            
+
+    }
+}

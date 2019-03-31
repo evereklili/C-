@@ -1,0 +1,52 @@
+using System; //bir kütğphanenin eklenmesi gerekir. using c# dahil edilmesini kapsamaktadır. Kütüphaneleri buraya ekleyebiliriz. 
+
+
+namespace ConsoleApp1
+{
+    class Omer//class ismi ile program ismi aynı olmak zorunda değidir!
+    {
+        static void Main(string[] args)
+        {
+            Account acocunt1 = new Account("ÖMER DOĞU"); 
+            Account account2 = new Account("John Blue");
+            //create two account objects 
+            Console.WriteLine($"Account1 name is= {acocunt1.Name2}");
+            Console.WriteLine($"Account2 name is= {account2.Name2}");
+
+
+                                                                                                                                    
+
+        }
+    }             
+----------------------------------------------------------------------------
+Account Class :
+namespace ConsoleApp1
+{
+    internal class Account
+    {
+        private string name; //instance variable
+        //property to get and set the name insance variable
+        public string Name
+        {
+            get //returns the corresponding instance variable's value
+            {
+                return name; //return the value of name to te client code.
+            }
+            set  //assing a new value to the corresponding instance variable
+            {
+                name = value; //value is implicitly declared and initialized. 
+
+            }
+        }
+
+        public string Name2 { get; set; } //auto-implemented property
+        //constructor sets the Name property to parameter accountName
+        public Account(string accountName)
+        {
+            Name = accountName;
+        }
+
+    }
+    
+}
+-------------------------------------------------------------

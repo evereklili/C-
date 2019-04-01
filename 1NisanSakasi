@@ -1,0 +1,91 @@
+using System; //bir kütğphanenin eklenmesi gerekir. using c# dahil edilmesini kapsamaktadır. Kütüphaneleri buraya ekleyebiliriz. 
+
+
+namespace ConsoleApp1
+{
+    class Omer//class ismi ile program ismi aynı olmak zorunda değidir!
+    {
+        static void Main(string[] args)
+        {
+             Insan ali=new Insan();
+             ali.Kilo = 80;
+             Console.WriteLine(ali.Kilo);
+
+
+        }
+    }
+
+    class Insan
+    {
+        //kendi sınıfımızı tanımlayabiliriz. Sınıf bir mefumu, kavramı belirtir. bunlardan obje üretiriz. Her insanın bir ismi vardır. İnsan sınıfının isim özelliğine bir özelliği vardır. İNT T
+
+        private String isim;
+        private int kilo; //public tutmayı pek tercih etmeyiz. getter ve setter fonksiyonlarımız vardı. yani kapsülleyerek dış dünyadan bu verileri koruruz. ona fonksiyon ile erişiriz. 
+        //biz burada şimdi yeni bir method geliştirelim. 
+        public void setKilo(int kilo)  
+        {
+            if (kilo < 0)
+            {
+                this.kilo = 0;
+            }
+            else
+            {
+                this.kilo = kilo;
+            }
+            this.kilo = kilo; //yukarıdaki kilo ismi class içinde tanımlı. peki ya method kilosu nerede tanımlı? 
+            //this.kilo ile kastımız; bize dışarıya erişimi sağlamaktadır hangi kilo geçerli desek bu alanda son tanımladğınız bu kilo geçerlidir. 
+            //setkilo methodu içinde objenin kilosunu hazırlarız. artık alinin kilosu doğrudan erişemiyoruz. 
+           
+        }
+
+        public int getKilo(int kilo)
+        {
+            return kilo;
+
+        }
+
+        public int Kilo  //erişim büyük Kilo üzeirnden atama ise küçük kilodan gelmektedir. 
+        {
+            get
+            {
+                return kilo;
+
+            }
+            set
+            {
+                if (value < 0) //value bana parametre olarak gelen her şeyi parametre olarak al. demektir. 
+                {
+                    this.kilo = 0;
+                }
+                else
+                {
+                    this.kilo = value;
+                }
+            }
+        }
+        public void setisim(string isim)
+        {
+            this.isim = isim;   
+
+        }
+
+         
+    }
+    
+}
+
+/*
+ * setisim("ÖMER DOĞU")
+ * Ömer DOGU
+ * C:\Program Files\dotnet\dotnet.exe (process 3396) exited with code 0.
+ *to automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+ * Press any key to close this window . . .
+    */
+
+
+
+//Constructir geri değer döndermez. ilk kez obje üretilirken çalıştırılan sınıf ile yanı isime sahiptir. bir methodtur. aynı isme sahiptir. ilk kez obje üretilirken çalıştırılrı. K
+//bir methodun birnden fazla alan da kullanılmasıdır. bir yapıcının farklı olarak tanımlanmasıdır.
+//contructir tanımın yaptık ve içine bir deper atadı. 
+
+

@@ -1,0 +1,27 @@
+using System; //bir kütğphanenin eklenmesi gerekir. using c# dahil edilmesini kapsamaktadır. Kütüphaneleri buraya ekleyebiliriz. 
+
+
+namespace ConsoleApp1
+{
+    class Omer//class ismi ile program ismi aynı olmak zorunda değidir!
+    {
+        static void Main(string[] args)
+        {
+            Account acocunt1 = new Account("ÖMER DOĞU"); 
+            Account account2 = new Account("John Blue");
+            //create two account objects 
+            Console.WriteLine($"Account1 name is= {acocunt1.Name2}");
+            Console.WriteLine($"Account2 name is= {account2.Name2}");
+
+
+                                                                                                                                    
+
+        }
+    }             
+
+    
+
+
+
+
+}

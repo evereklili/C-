@@ -1,0 +1,90 @@
+//#eşkenar dikdörgen bir koşul belirtir.  yuvarlak içi dolu siyah daire başlangıç bitişi gösterir. 
+//yapısal programlama özellikleri: kodun tekrar edilebilirliği, parametrize edilebilmesi, koşullara bağlanması vardır 
+
+using System;
+
+class Student
+{
+    public int Average
+    {
+        get
+        {
+            return average;
+
+        }
+        set
+        {
+            if (value > 0)
+                if (value <= 100)
+                    average = value; //askeri yazılımlarda veya daha güvenlik gerektiren yazılımlarda kesinlikle bu şeklilde parantezsiz olamaz. çünkü orada güvenlik gerekiren bir yapı ve sistem barındırmaktadır. 
+
+        }
+    }
+    public string Name { get; set; }
+    private int average;
+    public Student(string studentName, int studentAverage)
+    {
+        Name = studentName;
+        Average = studentAverage;
+
+    }
+
+    public string LetterGrade
+    {
+        get
+        {
+            string letterGrade = string.Empty;
+            if (average >= 90)
+                letterGrade = "A";
+            else if (average >= 80)  //ilk if sağlanmadıysa 
+                letterGrade = "B";
+            else if (average >= 70)  //ilk if sağlanmadıysa  yukardıdaki koşul olmassa buna bak.
+                letterGrade = "C";
+            else if (average >= 60)  //ilk if sağlanmadıysa 
+                letterGrade = "D";
+            else                     //ifleri bir birine bağlamassak  geri kalan bütün durumlar için bunu yap mantığı vardır. 
+                letterGrade = "F";
+            return letterGrade;
+        }
+       
+
+    }
+    
+
+}
+
+class StudentTest
+{
+    static void Main()
+    {
+        Student student1 = new Student("ÖMER DOĞU", 93);
+        Student student2 = new Student("Kamil Doğu,", 70);
+        Student student3 = new Student("İbrahim DOĞU", 100);
+        Console.WriteLine($"{student1.Name}, letter grade equivalent of");
+        Console.WriteLine($"{student1.Average}, is {student1.LetterGrade}");
+        Console.WriteLine($"{student2.Name}, letter grade equivalent of");
+        Console.WriteLine($"{student2.Average}, is {student2.LetterGrade}");
+        Console.WriteLine($"{student3.Name}, letter grade equivalent of");
+        Console.WriteLine($"{student3.Average}, is {student3.LetterGrade}");
+
+    }
+}
+
+
+//class içinde  değişken tanımlarsak özelliktir. methodlar olursa özelse constructor tanımlarsak bir obje üreteceğimiz zaman 
+
+
+
+
+
+//ÖMER DOGU, letter grade equivalent of
+//93, is A
+//Kamil Dogu,, letter grade equivalent of
+//70, is C
+//Ibrahim DOGU, letter grade equivalent of
+//100, is A
+
+//C:\Program Files\dotnet\dotnet.exe(process 14932) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .
+

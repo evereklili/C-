@@ -1,0 +1,103 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace WindowsFormsApplication3
+{
+    public partial class Form1 : Form
+    {
+        SqlConnection baglanti = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=gorsel2;Integrated Security=True");
+        SqlCommand komut;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string oadi, onum, omem, odt;
+            int sinif;
+            oadi = textBox1.Text;
+            onum = textBox2.Text;
+            omem = textBox3.Text;
+            odt = textBox6.Text;
+            sinif = Convert.ToInt32(textBox4.Text);
+            komut = new SqlCommand("insert into gorsel2 values('"+oadi+"','"+onum+"','"+omem+"','"+odt+"',"+sinif+")",baglanti);
+            baglanti.Open();
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            listBox3.Items.Clear();
+            listBox4.Items.Clear();
+            listBox5.Items.Clear();
+            baglanti.Open();
+            komut = new SqlCommand("Select * from gorsel2 order by oAdi",baglanti);
+            SqlDataReader oku=komut.ExecuteReader();
+            while (oku.Read())
+            {
+                listBox1.Items.Add(oku[1]);
+                listBox2.Items.Add(oku[2]);
+                listBox3.Items.Add(oku[3]);
+                listBox4.Items.Add(oku[4]);
+                listBox5.Items.Add(oku[5]);
+            }
+            baglanti.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string oadi, onum, omem, odt;
+            int sinif;
+            oadi = textBox1.Text;
+            onum = textBox2.Text;
+            omem = textBox3.Text;
+            odt = textBox6.Text;
+            sinif = Convert.ToInt32(textBox4.Text);
+            string istonum = textBox5.Text;
+            baglanti.Open();
+            komut = new SqlCommand("update gorsel2 set oAdi='" + oadi + "',oNum='"+onum+"',oMem='"+omem+"',oDT='"+odt+"',oSinif="+sinif+" where oNum='"+istonum+"'",baglanti);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (baglanti.State==ConnectionState.Closed)
+            baglanti.Open();
+            string istonum = textBox5.Text;
+            komut = new SqlCommand("delete from gorsel2 where oNum='"+istonum+"'",baglanti);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            textBox5.Text = "";
+        }
+    }
+}

@@ -1,0 +1,302 @@
+//using System;
+
+//namespace OMERDOGU
+//{
+//    class insan  //neden enkapsülayson kullanıyoruz. belirli bariyerler koyarak benim kontrolümden geçmesindendir. mesela neğatif kilo olmaz. 
+//    {
+//        //class bir kavram belirtiyoruz. Bundan obje üretirsek yaşayn insan olur. 
+//        public String isim;
+//        private int kilo; //her insan kilosu farklıdır. belirli bir nesneden bahsediyoruz. cins isimden bahseidyoruz. 
+//        public void setKilo(int kilo)
+//        {
+//            this.kilo = kilo;  //this.kilo sınıfın tamamında tanımlıdır. otomatik olarak method içinde geçerlidir. peki yukarıdaki kiloya nasıl erişeceğim. bunu da this sağlar. 
+//            //kilomuzu set etmiş oluyoyruz. otomatik olarka method içinde tanınlıdır. burada this.kilo ile sınıfın kilosuna erişiriz. 
+//        }
+//        public int getKilo()
+//        {
+//            return kilo; //daha önce kiloya erişebiliriz. 
+//        }
+
+//    } //bir objeinin içindeki değerlerin dış dünyadan korunmasına enkapsülasyon denir. 
+
+//    internal class Program  
+//    {
+//        private static void Main(string[] args)
+//        {
+//         Console.WriteLine("Hello World!");
+//        insan ali =new insan(); //bize sınıfı çağırmamzı new sağlar. 
+//        ali.setKilo(80);  //ali isimli insnaın kilosu 80 oldu. yani ali isimindek 80 kğ nesnenin kilolsu haline geldi. 
+//         ali.isim = "ALİ DEMİR";
+//         Console.WriteLine($"alinin kilolsu {ali.getKilo()}");
+//            //bazı değişkenleri public tutmayzı. bir fonksiyon için korumak ve değişkenlere değiştirmek için fonksiyon aracılığı ile korumalıyız. dışarıdan erişilemez. 
+//            ///*
+//            ///böyle bir method yazalım. 
+//            ///*/
+
+
+
+//        }
+//    }
+//}
+
+
+//Hello World!
+//alinin kilolsu 80
+
+//C:\Program Files\dotnet\dotnet.exe(process 9240) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .
+
+
+
+//using System;
+
+//namespace OMERDOGU
+//{
+//    class insan  //neden enkapsülayson kullanıyoruz. belirli bariyerler koyarak benim kontrolümden geçmesindendir. mesela neğatif kilo olmaz. 
+//    {
+//        //class bir kavram belirtiyoruz. Bundan obje üretirsek yaşayn insan olur. 
+//        public String isim;
+//        private int kilo; //her insan kilosu farklıdır. belirli bir nesneden bahsediyoruz. cins isimden bahseidyoruz. 
+
+
+
+
+
+
+//        public void setKilo(int kilo)
+//        {
+//            if (kilo > 0)
+//                this.kilo = kilo;  //this.kilo sınıfın tamamında tanımlıdır. otomatik olarak method içinde geçerlidir. peki yukarıdaki kiloya nasıl erişeceğim. bunu da this sağlar. 
+//            else
+//                this.kilo = 0;
+//            //kilomuzu set etmiş oluyoyruz. otomatik olarka method içinde tanınlıdır. burada this.kilo ile sınıfın kilosuna erişiriz. 
+//        }
+//        public int getKilo()
+//        {
+//            return kilo; //daha önce kiloya erişebiliriz. 
+//        }
+
+//    } //bir objeinin içindeki değerlerin dış dünyadan korunmasına enkapsülasyon denir. 
+
+//    internal class Program
+//    {
+//        private static void Main(string[] args)
+//        {
+//            Console.WriteLine("Hello World!");
+//            insan ali = new insan(); //bize sınıfı çağırmamzı new sağlar. 
+//            ali.setKilo(-80);  //ali isimli insnaın kilosu 80 oldu. yani ali isimindek 80 kğ nesnenin kilolsu haline geldi. 
+//            ali.isim = "ALİ DEMİR";
+//            Console.WriteLine($"alinin kilolsu {ali.getKilo()}");
+//            //bazı değişkenleri public tutmayzı. bir fonksiyon için korumak ve değişkenlere değiştirmek için fonksiyon aracılığı ile korumalıyız. dışarıdan erişilemez. 
+//            ///*
+//            ///böyle bir method yazalım. 
+//            ///*/
+//            //kapsüllemenin en önemli özelli korumak ve kontrol altında tutmaktır. Başkası bir programın yapmasıdır. 
+
+
+
+
+//        }
+//    }
+//}
+
+
+
+//Hello World!
+//alinin kilolsu 0
+
+//C:\Program Files\dotnet\dotnet.exe(process 16504) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .
+
+
+//using System;
+
+//namespace OMERDOGU
+//{
+//    class insan  //neden enkapsülayson kullanıyoruz. belirli bariyerler koyarak benim kontrolümden geçmesindendir. mesela neğatif kilo olmaz. 
+//    {
+//        //class bir kavram belirtiyoruz. Bundan obje üretirsek yaşayn insan olur. 
+//        public String isim;
+//        private int kilo; //her insan kilosu farklıdır. belirli bir nesneden bahsediyoruz. cins isimden bahseidyoruz. 
+
+//        public int Kilo
+//        {
+//            get
+//            {
+//                return kilo;
+//            }
+//            set
+//            {
+//                if (value <= 0)
+//                    this.kilo = 0;
+//                else
+//                    this.kilo = value;
+//            }
+//        }
+
+//        //ikitane set aynı anda çalışmamaktadır. ! 
+
+
+
+
+//    } //bir objeinin içindeki değerlerin dış dünyadan korunmasına enkapsülasyon denir. 
+
+//      class Program
+//    {
+//        private static void Main(string[] args)
+//        {
+//            insan omer = new insan();
+//            omer.Kilo = 80;
+//            omer.isim = "ÖMER DOĞU Eskişehir";
+//            Console.WriteLine($"{omer.isim} \'in kilosu {omer.Kilo}");
+//            omer.Kilo = -100;
+//            omer.isim = "ÖMER DOĞU Eskişehir";
+//            Console.WriteLine($"{omer.isim} \'in kilosu {omer.Kilo}");
+
+
+
+//        }
+//    }
+//}
+
+//ÖMER DOGU Eskisehir 'in kilosu 80
+//ÖMER DOGU Eskisehir 'in kilosu 0
+
+//C:\Program Files\dotnet\dotnet.exe(process 6152) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .
+
+
+
+
+
+
+//using System;
+
+//namespace OMERDOGU
+//{
+//    class insan  //neden enkapsülayson kullanıyoruz. belirli bariyerler koyarak benim kontrolümden geçmesindendir. mesela neğatif kilo olmaz. 
+//    {
+//        //class bir kavram belirtiyoruz. Bundan obje üretirsek yaşayn insan olur. 
+//        public String isim;
+//        private int kilo; //her insan kilosu farklıdır. belirli bir nesneden bahsediyoruz. cins isimden bahseidyoruz. 
+
+//        public int Kilo
+//        {
+//            get
+//            {
+//                return kilo;
+//            }
+//            set
+//            {
+//                if (value <= 0)
+//                    this.kilo = 0;
+//                else
+//                    this.kilo = value;
+//            }
+//        }
+
+//        //ikitane set aynı anda çalışmamaktadır. ! 
+
+//        public insan()
+//        {
+//            Console.WriteLine("Bir insan üretildi.");
+//        }
+
+
+
+//    } //bir objeinin içindeki değerlerin dış dünyadan korunmasına enkapsülasyon denir. 
+
+//    class Program
+//    {
+//        private static void Main(string[] args)
+//        {
+//            insan omer = new insan();
+//            omer.Kilo = 80;
+//            omer.isim = "ÖMER DOĞU Eskişehir";
+//            Console.WriteLine($"{omer.isim} \'in kilosu {omer.Kilo}");
+//            omer.Kilo = -100;
+//            omer.isim = "ÖMER DOĞU Eskişehir";
+//            Console.WriteLine($"{omer.isim} in kilosu {omer.Kilo}");
+
+
+
+//        }
+//    }
+//}
+/*
+ * bir klasin kendine özgü özellikleri olabilr. bir obje ile erişebilri. ,
+ * kontroatra sınıfla aynı isme sahip oalcaktı.r public insan(){
+ * aynı isme shaiptir. return type yoktur. ilk kez çalıştırılan methoddur. */
+
+
+
+
+//Bir insan üretildi.
+//ÖMER DOGU Eskisehir 'in kilosu 80
+//ÖMER DOGU Eskisehir in kilosu 0
+
+//C:\Program Files\dotnet\dotnet.exe(process 12276) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .
+
+using System;
+
+namespace OMERDOGU
+{
+    class insan  //neden enkapsülayson kullanıyoruz. belirli bariyerler koyarak benim kontrolümden geçmesindendir. mesela neğatif kilo olmaz. 
+    {
+        //class bir kavram belirtiyoruz. Bundan obje üretirsek yaşayn insan olur. 
+        public String isim;
+        private int kilo; //her insan kilosu farklıdır. belirli bir nesneden bahsediyoruz. cins isimden bahseidyoruz. 
+
+        public int Kilo
+        {
+            get
+            {
+                return kilo;
+            }
+            set
+            {
+                if (value <= 0)
+                    this.kilo = 0;
+                else
+                    this.kilo = value;
+            }
+        }
+
+        //ikitane set aynı anda çalışmamaktadır. ! 
+
+        public insan()
+        {
+            Console.WriteLine("Bir insan üretildi.");
+        }
+
+
+
+    } //bir objeinin içindeki değerlerin dış dünyadan korunmasına enkapsülasyon denir. 
+
+    class Program
+    {
+        private static void Main(string[] args)
+        {
+            insan omer = new insan();
+            omer.Kilo = 80;
+            omer.isim = "ÖMER DOĞU Eskişehir";
+            Console.WriteLine($"{omer.isim} \'in kilosu {omer.Kilo}");
+            omer.Kilo = -100;
+            omer.isim = "ÖMER DOĞU Eskişehir";
+            Console.WriteLine($"{omer.isim} in kilosu {omer.Kilo}");
+
+
+
+        }
+    }
+}
+
+/*
+ * bir methodun birnden fazla şekilde kullanılması polimorfizm olarka da göreceğiz. bir constuctur yeniden tanımlanması birisi int diğer void olması ibidir. 
+ * 
+ * 

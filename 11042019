@@ -1,0 +1,125 @@
+
+//class WhileCounter
+//{
+//    static void Main()
+//    {
+//        int counter = 1;
+//        while(counter<=20)
+//        {
+//            Console.WriteLine($"{counter}");
+//            ++counter;
+//        }
+//        Console.WriteLine();
+//    }
+//}
+//1
+//2
+//3
+//4
+//5
+//6
+//7
+//8
+//9
+//10
+//11
+//12
+//13
+//14
+//15
+//16
+//17
+//18
+//19
+//20
+
+
+//C:\Program Files\dotnet\dotnet.exe(process 4920) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+
+//using System;
+//class ForCounter
+//{
+//    static void Main()
+//    {
+//        for (int counter = 1; counter <= 10; counter++)
+//            Console.WriteLine($"{counter}");
+//    }
+//}
+
+//1
+//2
+//3
+//4
+//5
+//6
+//7
+//8
+//9
+//10
+
+//C:\Program Files\dotnet\dotnet.exe(process 10000) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .
+
+//burada önemli olan başlangıç, bitiş ve artış değeri önemldiir. 
+
+
+//using System;
+//class Sum
+//{
+//    static void Main()
+//    {
+//        int total = 0;
+//        for (int i = 2; i <= 2000; i += 2)
+//        {
+//            total += i;
+
+//        }
+//        Console.WriteLine(total);
+
+
+//    }
+//}
+
+//1001000
+
+//C:\Program Files\dotnet\dotnet.exe(process 2788) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .
+
+
+//using System;
+//class Interst
+//{
+//    static void Main()
+//    {
+//        decimal principal = 1000;
+//        double rate=0.05;
+//        Console.WriteLine("Year Amount on deposit");
+//        for(int year=1; year<=10;++year)
+//        {
+//            decimal amount = principal * ((decimal)Math.Pow(1.0 + rate, year));
+//            Console.WriteLine($"{year,4} {amount,20:c}");
+
+//        }
+//    }
+//}
+
+
+
+//Year Amount on deposit
+//   1            $1,050.00
+//   2            $1,102.50
+//   3            $1,157.63
+//   4            $1,215.51
+//   5            $1,276.28
+//   6            $1,340.10
+//   7            $1,407.10
+//   8            $1,477.46
+//   9            $1,551.33
+//  10            $1,628.89
+
+//C:\Program Files\dotnet\dotnet.exe(process 1148) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .

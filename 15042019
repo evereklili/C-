@@ -1,0 +1,613 @@
+//using System;
+
+//using System;
+//class Interst
+//{
+//    static void Main()
+//    {
+//        int say = 0, counter = 1;
+//        do
+//        {
+//            say++;
+//            Console.WriteLine($"{counter} sayılan döngü sayısı: {say}  ");
+//            ++counter;
+//            iş önce yapılır sonra çalışır.en az bir kere girer.
+//        } while (counter < 101);
+
+
+//        Console.WriteLine();
+
+
+//    }
+//}
+
+//   1 sayilan döngü sayisi: 1
+//2 sayilan döngü sayisi: 2
+//3 sayilan döngü sayisi: 3
+//4 sayilan döngü sayisi: 4
+//5 sayilan döngü sayisi: 5
+//6 sayilan döngü sayisi: 6
+//7 sayilan döngü sayisi: 7
+//8 sayilan döngü sayisi: 8
+//9 sayilan döngü sayisi: 9
+//10 sayilan döngü sayisi: 10
+//11 sayilan döngü sayisi: 11
+//12 sayilan döngü sayisi: 12
+//13 sayilan döngü sayisi: 13
+//14 sayilan döngü sayisi: 14
+//15 sayilan döngü sayisi: 15
+//16 sayilan döngü sayisi: 16
+//17 sayilan döngü sayisi: 17
+//18 sayilan döngü sayisi: 18
+//19 sayilan döngü sayisi: 19
+//20 sayilan döngü sayisi: 20
+//21 sayilan döngü sayisi: 21
+//22 sayilan döngü sayisi: 22
+//23 sayilan döngü sayisi: 23
+//24 sayilan döngü sayisi: 24
+//25 sayilan döngü sayisi: 25
+//26 sayilan döngü sayisi: 26
+//27 sayilan döngü sayisi: 27
+//28 sayilan döngü sayisi: 28
+//29 sayilan döngü sayisi: 29
+//30 sayilan döngü sayisi: 30
+//31 sayilan döngü sayisi: 31
+//32 sayilan döngü sayisi: 32
+//33 sayilan döngü sayisi: 33
+//34 sayilan döngü sayisi: 34
+//35 sayilan döngü sayisi: 35
+//36 sayilan döngü sayisi: 36
+//37 sayilan döngü sayisi: 37
+//38 sayilan döngü sayisi: 38
+//39 sayilan döngü sayisi: 39
+//40 sayilan döngü sayisi: 40
+//41 sayilan döngü sayisi: 41
+//42 sayilan döngü sayisi: 42
+//43 sayilan döngü sayisi: 43
+//44 sayilan döngü sayisi: 44
+//45 sayilan döngü sayisi: 45
+//46 sayilan döngü sayisi: 46
+//47 sayilan döngü sayisi: 47
+//48 sayilan döngü sayisi: 48
+//49 sayilan döngü sayisi: 49
+//50 sayilan döngü sayisi: 50
+//51 sayilan döngü sayisi: 51
+//52 sayilan döngü sayisi: 52
+//53 sayilan döngü sayisi: 53
+//54 sayilan döngü sayisi: 54
+//55 sayilan döngü sayisi: 55
+//56 sayilan döngü sayisi: 56
+//57 sayilan döngü sayisi: 57
+//58 sayilan döngü sayisi: 58
+//59 sayilan döngü sayisi: 59
+//60 sayilan döngü sayisi: 60
+//61 sayilan döngü sayisi: 61
+//62 sayilan döngü sayisi: 62
+//63 sayilan döngü sayisi: 63
+//64 sayilan döngü sayisi: 64
+//65 sayilan döngü sayisi: 65
+//66 sayilan döngü sayisi: 66
+//67 sayilan döngü sayisi: 67
+//68 sayilan döngü sayisi: 68
+//69 sayilan döngü sayisi: 69
+//70 sayilan döngü sayisi: 70
+//71 sayilan döngü sayisi: 71
+//72 sayilan döngü sayisi: 72
+//73 sayilan döngü sayisi: 73
+//74 sayilan döngü sayisi: 74
+//75 sayilan döngü sayisi: 75
+//76 sayilan döngü sayisi: 76
+//77 sayilan döngü sayisi: 77
+//78 sayilan döngü sayisi: 78
+//79 sayilan döngü sayisi: 79
+//80 sayilan döngü sayisi: 80
+//81 sayilan döngü sayisi: 81
+//82 sayilan döngü sayisi: 82
+//83 sayilan döngü sayisi: 83
+//84 sayilan döngü sayisi: 84
+//85 sayilan döngü sayisi: 85
+//86 sayilan döngü sayisi: 86
+//87 sayilan döngü sayisi: 87
+//88 sayilan döngü sayisi: 88
+//89 sayilan döngü sayisi: 89
+//90 sayilan döngü sayisi: 90
+//91 sayilan döngü sayisi: 91
+//92 sayilan döngü sayisi: 92
+//93 sayilan döngü sayisi: 93
+//94 sayilan döngü sayisi: 94
+//95 sayilan döngü sayisi: 95
+//96 sayilan döngü sayisi: 96
+//97 sayilan döngü sayisi: 97
+//98 sayilan döngü sayisi: 98
+//99 sayilan döngü sayisi: 99
+//100 sayilan döngü sayisi: 100
+
+
+//C:\Program Files\dotnet\dotnet.exe(process 10544) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . . 
+
+//using System;
+//class omer
+//{
+//    static void Main()
+//    {
+//        int total = 0; //sum of grades
+//        int gradeCounter = 0; //number of grades entered
+//        int aCount = 0; //counter of A Grades 
+//        int bCount = 0; //counter of B Grades 
+//        int cCount = 0; //counter of C Grades 
+//        int dCount =0; 
+
+
+//        int fCount = 0; //counter of f Grades 
+//        Console.WriteLine("Enter the integer grades in the ");
+//        Console.WriteLine("Type <Ctrl> z and press to terminate input");
+//        string input = Console.ReadLine();
+
+//        while(input!=null)
+//        {
+//            int grade = int.Parse(input);
+//            total += grade;
+//            ++gradeCounter;
+//            switch(grade/10)
+//            {
+//                case 9: //
+//                case 10:
+//                    ++aCount; break;
+//                case 8:
+//                    ++bCount; break;
+//                case 7:
+//                    ++cCount; break;
+//                case 6:
+//                    ++dCount; break;
+//                defalt:
+//                    ++fCount; break;
+
+//            }
+//            input = Console.ReadLine();
+
+//        }
+//        Console.WriteLine(" \n Grade Report:");
+//        if(gradeCounter!=0)
+//        {
+//            double average = (double)total / gradeCounter;
+//            Console.WriteLine($"Total of the {gradeCounter} grades entered is {total}");
+//            Console.WriteLine($"Class average is {average:F} ");
+//            Console.WriteLine("Number of students who received each grade: ");
+//            Console.WriteLine($"A: {aCount}");
+//            Console.WriteLine($"B: {bCount}");
+//            Console.WriteLine($"C: {cCount}");
+//            Console.WriteLine($"D: {dCount}");
+//            Console.WriteLine($"F: {fCount}");
+
+//        }
+//        else
+//        {
+//            Console.WriteLine("No grades were entered.");
+//        }
+
+
+//    }
+
+
+
+//    Enter the integer grades in the
+//Type<Ctrl> z and press to terminate input
+//100
+//70
+//60
+//10
+//45
+//13
+//52
+//52
+//56
+//56
+//78
+//15
+//155
+//10
+//52
+//32
+//35
+//38
+//51
+//50
+//^Z
+
+// Grade Report:
+//Total of the 20 grades entered is 1030
+//Class average is 51.50
+//Number of students who received each grade:
+//A: 1
+//B: 0
+//C: 2
+//D: 1
+//F: 0
+
+//C:\Program Files\dotnet\dotnet.exe (process 19048) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+////Press any key to close this window. . .
+
+//class AutoPolicy
+//{
+//    public int AccountNumber { get; set; } //policy account;
+//    public string MakeAndModel { get; set; } //car that
+//    public string State { get; set; } //two letter state
+
+//    public AutoPolicy(int accountNumber, string makeAndModel, string state)
+//    {
+//        AccountNumber = accountNumber;
+//        MakeAndModel = makeAndModel;
+//        State = state;
+//    }
+//    public bool IsNotFaultState
+//    {
+        
+//        get
+//        {
+//            bool noFaultState;
+            
+//            switch(State)
+//            {
+//                case "MA":case "NJ": case "NY": case "PA":
+//                    noFaultState = true;
+//                    break;
+//                defalt:
+//                    noFaultState = false;
+//                    break;
+
+            
+//            }
+//            return noFaultState;
+           
+//        }
+//    }
+//}
+
+
+
+// 1000 tl kadar karı olan kişilerin %10
+//1000 üzeri olanlara %20 vergi
+//10.000 tl üstü olanlardan %30 vergi alısın 
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+class Program
+{
+    static void Main()
+    {
+
+        int gelir;
+        string okunan = Console.ReadLine();
+        gelir = int.Parse(okunan);
+        // int gelir=int.Parse(Console.ReadLine()); okunabilirdi. ,
+        double vergi;
+        if (gelir <= 1000)
+        {
+            vergi = gelir * 0.10;
+        }
+        else if (gelir <=10000)
+        {
+            vergi = (double)gelir * 0.20;
+        }
+        else
+            vergi = (double)gelir * 0.30;
+        Console.WriteLine($"{gelir} tutarındaki karınızın {vergi} bulunmaktadır. En yakın ödeme noktasına lütfen ödeme yapınız. ");
+
+
+
+    }
+}//using System;
+
+//using System;
+//class Interst
+//{
+//    static void Main()
+//    {
+//        int say = 0, counter = 1;
+//        do
+//        {
+//            say++;
+//            Console.WriteLine($"{counter} sayılan döngü sayısı: {say}  ");
+//            ++counter;
+//            iş önce yapılır sonra çalışır.en az bir kere girer.
+//        } while (counter < 101);
+
+
+//        Console.WriteLine();
+
+
+//    }
+//}
+
+//   1 sayilan döngü sayisi: 1
+//2 sayilan döngü sayisi: 2
+//3 sayilan döngü sayisi: 3
+//4 sayilan döngü sayisi: 4
+//5 sayilan döngü sayisi: 5
+//6 sayilan döngü sayisi: 6
+//7 sayilan döngü sayisi: 7
+//8 sayilan döngü sayisi: 8
+//9 sayilan döngü sayisi: 9
+//10 sayilan döngü sayisi: 10
+//11 sayilan döngü sayisi: 11
+//12 sayilan döngü sayisi: 12
+//13 sayilan döngü sayisi: 13
+//14 sayilan döngü sayisi: 14
+//15 sayilan döngü sayisi: 15
+//16 sayilan döngü sayisi: 16
+//17 sayilan döngü sayisi: 17
+//18 sayilan döngü sayisi: 18
+//19 sayilan döngü sayisi: 19
+//20 sayilan döngü sayisi: 20
+//21 sayilan döngü sayisi: 21
+//22 sayilan döngü sayisi: 22
+//23 sayilan döngü sayisi: 23
+//24 sayilan döngü sayisi: 24
+//25 sayilan döngü sayisi: 25
+//26 sayilan döngü sayisi: 26
+//27 sayilan döngü sayisi: 27
+//28 sayilan döngü sayisi: 28
+//29 sayilan döngü sayisi: 29
+//30 sayilan döngü sayisi: 30
+//31 sayilan döngü sayisi: 31
+//32 sayilan döngü sayisi: 32
+//33 sayilan döngü sayisi: 33
+//34 sayilan döngü sayisi: 34
+//35 sayilan döngü sayisi: 35
+//36 sayilan döngü sayisi: 36
+//37 sayilan döngü sayisi: 37
+//38 sayilan döngü sayisi: 38
+//39 sayilan döngü sayisi: 39
+//40 sayilan döngü sayisi: 40
+//41 sayilan döngü sayisi: 41
+//42 sayilan döngü sayisi: 42
+//43 sayilan döngü sayisi: 43
+//44 sayilan döngü sayisi: 44
+//45 sayilan döngü sayisi: 45
+//46 sayilan döngü sayisi: 46
+//47 sayilan döngü sayisi: 47
+//48 sayilan döngü sayisi: 48
+//49 sayilan döngü sayisi: 49
+//50 sayilan döngü sayisi: 50
+//51 sayilan döngü sayisi: 51
+//52 sayilan döngü sayisi: 52
+//53 sayilan döngü sayisi: 53
+//54 sayilan döngü sayisi: 54
+//55 sayilan döngü sayisi: 55
+//56 sayilan döngü sayisi: 56
+//57 sayilan döngü sayisi: 57
+//58 sayilan döngü sayisi: 58
+//59 sayilan döngü sayisi: 59
+//60 sayilan döngü sayisi: 60
+//61 sayilan döngü sayisi: 61
+//62 sayilan döngü sayisi: 62
+//63 sayilan döngü sayisi: 63
+//64 sayilan döngü sayisi: 64
+//65 sayilan döngü sayisi: 65
+//66 sayilan döngü sayisi: 66
+//67 sayilan döngü sayisi: 67
+//68 sayilan döngü sayisi: 68
+//69 sayilan döngü sayisi: 69
+//70 sayilan döngü sayisi: 70
+//71 sayilan döngü sayisi: 71
+//72 sayilan döngü sayisi: 72
+//73 sayilan döngü sayisi: 73
+//74 sayilan döngü sayisi: 74
+//75 sayilan döngü sayisi: 75
+//76 sayilan döngü sayisi: 76
+//77 sayilan döngü sayisi: 77
+//78 sayilan döngü sayisi: 78
+//79 sayilan döngü sayisi: 79
+//80 sayilan döngü sayisi: 80
+//81 sayilan döngü sayisi: 81
+//82 sayilan döngü sayisi: 82
+//83 sayilan döngü sayisi: 83
+//84 sayilan döngü sayisi: 84
+//85 sayilan döngü sayisi: 85
+//86 sayilan döngü sayisi: 86
+//87 sayilan döngü sayisi: 87
+//88 sayilan döngü sayisi: 88
+//89 sayilan döngü sayisi: 89
+//90 sayilan döngü sayisi: 90
+//91 sayilan döngü sayisi: 91
+//92 sayilan döngü sayisi: 92
+//93 sayilan döngü sayisi: 93
+//94 sayilan döngü sayisi: 94
+//95 sayilan döngü sayisi: 95
+//96 sayilan döngü sayisi: 96
+//97 sayilan döngü sayisi: 97
+//98 sayilan döngü sayisi: 98
+//99 sayilan döngü sayisi: 99
+//100 sayilan döngü sayisi: 100
+
+
+//C:\Program Files\dotnet\dotnet.exe(process 10544) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . . 
+
+//using System;
+//class omer
+//{
+//    static void Main()
+//    {
+//        int total = 0; //sum of grades
+//        int gradeCounter = 0; //number of grades entered
+//        int aCount = 0; //counter of A Grades 
+//        int bCount = 0; //counter of B Grades 
+//        int cCount = 0; //counter of C Grades 
+//        int dCount =0; 
+
+
+//        int fCount = 0; //counter of f Grades 
+//        Console.WriteLine("Enter the integer grades in the ");
+//        Console.WriteLine("Type <Ctrl> z and press to terminate input");
+//        string input = Console.ReadLine();
+
+//        while(input!=null)
+//        {
+//            int grade = int.Parse(input);
+//            total += grade;
+//            ++gradeCounter;
+//            switch(grade/10)
+//            {
+//                case 9: //
+//                case 10:
+//                    ++aCount; break;
+//                case 8:
+//                    ++bCount; break;
+//                case 7:
+//                    ++cCount; break;
+//                case 6:
+//                    ++dCount; break;
+//                defalt:
+//                    ++fCount; break;
+
+//            }
+//            input = Console.ReadLine();
+
+//        }
+//        Console.WriteLine(" \n Grade Report:");
+//        if(gradeCounter!=0)
+//        {
+//            double average = (double)total / gradeCounter;
+//            Console.WriteLine($"Total of the {gradeCounter} grades entered is {total}");
+//            Console.WriteLine($"Class average is {average:F} ");
+//            Console.WriteLine("Number of students who received each grade: ");
+//            Console.WriteLine($"A: {aCount}");
+//            Console.WriteLine($"B: {bCount}");
+//            Console.WriteLine($"C: {cCount}");
+//            Console.WriteLine($"D: {dCount}");
+//            Console.WriteLine($"F: {fCount}");
+
+//        }
+//        else
+//        {
+//            Console.WriteLine("No grades were entered.");
+//        }
+
+
+//    }
+
+
+
+//    Enter the integer grades in the
+//Type<Ctrl> z and press to terminate input
+//100
+//70
+//60
+//10
+//45
+//13
+//52
+//52
+//56
+//56
+//78
+//15
+//155
+//10
+//52
+//32
+//35
+//38
+//51
+//50
+//^Z
+
+// Grade Report:
+//Total of the 20 grades entered is 1030
+//Class average is 51.50
+//Number of students who received each grade:
+//A: 1
+//B: 0
+//C: 2
+//D: 1
+//F: 0
+
+//C:\Program Files\dotnet\dotnet.exe (process 19048) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+////Press any key to close this window. . .
+
+//class AutoPolicy
+//{
+//    public int AccountNumber { get; set; } //policy account;
+//    public string MakeAndModel { get; set; } //car that
+//    public string State { get; set; } //two letter state
+
+//    public AutoPolicy(int accountNumber, string makeAndModel, string state)
+//    {
+//        AccountNumber = accountNumber;
+//        MakeAndModel = makeAndModel;
+//        State = state;
+//    }
+//    public bool IsNotFaultState
+//    {
+        
+//        get
+//        {
+//            bool noFaultState;
+            
+//            switch(State)
+//            {
+//                case "MA":case "NJ": case "NY": case "PA":
+//                    noFaultState = true;
+//                    break;
+//                defalt:
+//                    noFaultState = false;
+//                    break;
+
+            
+//            }
+//            return noFaultState;
+           
+//        }
+//    }
+//}
+
+
+
+// 1000 tl kadar karı olan kişilerin %10
+//1000 üzeri olanlara %20 vergi
+//10.000 tl üstü olanlardan %30 vergi alısın 
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+class Program
+{
+    static void Main()
+    {
+
+        int gelir;
+        string okunan = Console.ReadLine();
+        gelir = int.Parse(okunan);
+        // int gelir=int.Parse(Console.ReadLine()); okunabilirdi. ,
+        double vergi;
+        if (gelir <= 1000)
+        {
+            vergi = gelir * 0.10;
+        }
+        else if (gelir <=10000)
+        {
+            vergi = (double)gelir * 0.20;
+        }
+        else
+            vergi = (double)gelir * 0.30;
+        Console.WriteLine($"{gelir} tutarındaki karınızın {vergi} bulunmaktadır. En yakın ödeme noktasına lütfen ödeme yapınız. ");
+
+
+
+    }
+}

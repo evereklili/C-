@@ -1,0 +1,92 @@
+using System;
+
+
+/*
+ * bir
+ * hazır bazı methodlar var. 
+ * Math kütüphanesinde yer alan methodları bakalım. 
+ * Kendim methodumuzu nasıl yazac
+ * Abas(x) tam değerine çevirir. 
+ * Ceiling(x)  taban yuvarlar
+ * Floor(x)
+ * cos, sin, tan, Max(x,y), Pow(x,y), Sqrt,(x), Min(x,y), Log(x), Exp(x);Console.WriteLine birer methoddr. 
+ * C# içinde hazır methodlar var bunları kullanabiliriz. Static diye bir kelime var. Daha ileri seviyede dil kullanımında
+ * Daha detyalı olarak işlense de, bir method yapsının farklı bir yerde durmasını sağlar. Constant yani sabit değerler sabittir değişmez. 
+ * pi sayısını düşünelim. pi=3.14 olsun diyelim. o değişkeni sabit olarak satımlaırız. Bu yapı değişmez. 
+ * 
+ * 
+ */
+
+class MaximumFinder
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter first floating-point value:");
+        double number1 = double.Parse(Console.ReadLine());
+        Console.WriteLine("Enter second floating- point value:");
+        double number2 = double.Parse(Console.ReadLine());
+        Console.WriteLine("Enter third floating-point value:");
+        double number3 = double.Parse(Console.ReadLine());
+
+        //determine he maximum of three values;
+        double result = Maximum(number1,
+                                number2,
+                                number3);
+        Console.WriteLine($"Üç sayının en büyüğü: {result}");
+
+
+    }
+    static double Maximum(double x, double y, double z)
+    {
+        double maximumValue = x; //assume x is the largest to start; 
+                                 //determine whether y is greater than maxsimumValue;
+        if (y > maximumValue)
+            maximumValue = y;
+        //blok bitti  tek satırda hallettik. ama güvenli bir yöntem değil!
+        //determine whether z is greater than maximumValue
+        if (z > maximumValue)
+        {
+            //süslü pakize kullanmak güvenmli bir yöntemdri. Askeri uygulamalarda gerektirmektedir Askeri uygulamalar çok iyi tanımlı bloklardan oluşmaktadr. Sınırları çok iyi çizilmiş durumlardan meydana gelir. maksimum ve minumum noktaları çizeriz ve belirsizliği yok etmeye çalışırız. 
+            maximumValue = z;
+        }
+        return maximumValue;
+    }
+}
+
+
+
+//Enter first floating-point value:
+//53156131,3132
+//Enter second floating- point value:
+//3181315
+//Enter third floating-point value:
+//321315816894
+//Üç sayinin en büyügü: 531561313132
+
+//C:\Program Files\dotnet\dotnet.exe(process 10020) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .
+/*
+ * sayıyı aklında tutuyor ve diğerleri ile karşılaştırmaktdır. static scope da (java da mainler static tanımlaırken) static spoce  alanda static spoce method çağırabiliri veya nyp yapar nesne ile çağırırız. 
+ * OOP dillerde her şey objedir. Böyle bir çağırma da pür oop diller de bu olmaz. static yapı bize static method tanımlarız. çünkü bir method üretmeden bize bir methodu çağırmamızı static sağlamaktadır. 
+ * static bir methodan bir obje tanınmlamadan bir method çağırmak istiyorsak, obeje tanımlamadan static bir method çağrılabilinir. 
+ * ya da obje üreterek olmaktadır. Tanımlamada da f(x) gibi maksimum fonksiyonu tanımlanmış. x ile y'y karışlaştır. return kelimesi geriye dğer döndürme anlamındadr. 
+ * yapısal programlama dilinde: kod bloklarına bağlı(kontrole bağlı olması), kod tekrarının olması(while gibi), parametrize edilebilimesidir. yani fonksiyonlar gibi iş akışı sağlanabilmesidir. kodun parametrize edilmesi denir. buna prosedür, mehtod ve benzeri isimlerle anılmaktadır. 
+ * bu videolar üniversitedeki ders yerine geçmez. mühendislikte yer alan kültür farklıdır. belki de merak eden insanlar abilgi vermeyi çalışılmaktaıdr. 
+ * return type var. 
+ * static double Maksimum(...) methodunda hangi tipte değer döndüreceğini c# söylemeliyiz. buradan gelecek değer ne olacak? bütün methodları tanımlarken döndüreceğimzi tipi c# söyleyecğiz. 
+ * {  ...} arasında kalan yerler de body ismi verilir. bunun tek istinası yani constructure ise return type yoktur. çünkü constructure obje döndürür. burada return type ifade edile. 
+ * bu typeler. 
+ * bool 
+ * byte 8 bitlik olabiir
+ * char
+ * decimal 
+ * double, float (aralardan tutuşfarklı farklı) 
+ * int long, ... bunardan birisi ile döndürebilirsirz. 
+ * Namespace baktığımzda değişik metholdlar var. C# yazan kişier yazmıştır. 
+ * System.Windows.Forms kullanıcı ile etkişelşim kurarız. API bulunur. Bu methodları tanımamak bize iyi gleir. B
+ * 
+ * c# gibi gelişmiş dillerde milyonlarca method olabilir. Zaman içinde işiniz oldukça bir müddet sonra öğrenmiş olabilirsinz. 
+ * Baştan sona API okuyan insanlar da vardır. Bilgi olarak giriş ve çıkışla ilgili, database, web, xml gibi bakmak güzeldir. Collection, Generic yapılardan...etc. bahsedeceğiz. 
+ */
+   

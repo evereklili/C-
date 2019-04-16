@@ -1,0 +1,118 @@
+///*
+// * bilgisayarda rastgele üretilmez. makine ne yapacağını kesin dillerle bellidir. Bilgisayarda rastgele sayı üretilemez. Ne zaman ne yapacağı bellidir. 
+// * Dolaysıyla rastgele sayı üretmekiçn belirli algoritmalar oluşturulmuştur. burada kullanılan yöntem, sayının istendiği zamanın rastgele olacağı ifade edilek istenmektedir.
+// * çok hızlı hareket mesela bilgisayar içindeki saatin çok hızlı hareket eden sayacının son iki hanesini rastgele oynatırsak rastgele olacağı ifade edilebinir. belirli bir frekansta olması ifade edilmek istenmektedir. kaba rastgelelik 
+// * kullanılmaktadır. internet üzerindeki kasionalarlda belirli bir yapıya girmesi halinde belirli dolandırılcılık ifade edilir. 
+// * insanları kandırmak veya sizi zararar uğratır. tam rastgelelik istiyorsak, atomaltı çalışmalar yapılmalıdır.
+// * basit bir sayı üretmek gibi bir şey yapacağız. Bilgi olarak yönlendirmek önemlidir.
+// */
+//using System;
+//class RandomIntegers
+//{
+//    static void Main()
+//    {
+//        Random randomNumbers = new Random();
+//        for (int i = 1; i <= 20; i++)
+//        {
+//            int face = randomNumbers.Next(1, 7);
+//            Console.WriteLine($"{ face}   ");
+
+//        }
+//        Console.WriteLine();
+
+//    }
+//}
+
+
+////1
+////2
+////1
+////6
+////3
+////6
+////4
+////6
+////4
+////3
+////6
+////5
+////3
+////1
+////2
+////2
+////3
+////5
+////5
+////1
+
+
+////C:\Program Files\dotnet\dotnet.exe(process 15000) exited with code 0.
+////To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+////Press any key to close this window. . .
+///
+
+using System;
+class RollDie
+{
+    static void Main()
+    {
+        Random randomNumbers = new Random(); // random number generator     
+        int fr1 = 0; //count of 1s rolled; 
+        int fr2 = 0; //count of 2s rolled; 
+        int fr3 = 0; //count of 3s rolled; 
+        int fr4 = 0; //count of 4s rolled; 
+        int fr5 = 0; //count of 5s rolled; 
+        int fr6 = 0; //count of 6s rolled; 
+
+
+       //her zardan kaçar tane atacağımızı sayacağız. Hep eğitm amacıyla videolarımız devam etmekteid.r
+       //altı adet integer tanımlıyrouz. her birinin sayısnıı ayır ayrı artıracağız. artırmış olacağız. 
+       for(int roll=1; roll<=60000000;roll++)
+        {
+            int face = randomNumbers.Next(1, 7); // 1 dahil ama 7 dahil değl. 
+            switch (face)
+            {
+                case 1:
+                    ++fr1; // increment the 1st counter. 
+                    break;
+                case 2:
+                    ++fr2; //increment the 2st counter;
+                    break;
+                case 3:
+                    ++fr3; //increment the 3 st counter;
+                    break;
+                case 4:
+                    ++fr4; //increment the 4st counter;
+                    break;
+                case 5:
+                    ++fr5; //increment the 5st counter. 
+                    break;
+                case 6:
+                    ++fr6; //increment the 6st counter
+                    break;
+            }
+
+
+        }
+        Console.WriteLine("Face \t Frequency "); //output headers
+        Console.WriteLine($"1\t {fr1} \n2 \t {fr2}");
+        Console.WriteLine($"3\t {fr3} \n4 \t {fr4}");
+        Console.WriteLine($"5 \t {fr5} \n6 \t {fr6}");
+
+    }
+
+}
+
+
+//Face Frequency
+//1        10006657
+//2        9997780
+//3        9996615
+//4        9997081
+//5        10001431
+//6        10000436
+
+//C:\Program Files\dotnet\dotnet.exe(process 1460) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window. . .
+

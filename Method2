@@ -1,0 +1,146 @@
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+
+//namespace ConsoleApp1
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//        }
+//    }
+//}
+
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+
+//namespace ConsoleApp1
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            Console.WriteLine("ÖMER DOĞU");
+//            Random randomNumbers = new Random();
+//            for (int counter = 1; counter <= 100; ++counter)
+//            {
+//                int face = randomNumbers.Next(1, 7);
+//                //bilgisayarda rasgelelik yoktur.akademiden geldiğimiz için, bilgisayrda rasgelelik yoktur. rastgele sayı üretmek imkansızdır. ne zaman ne yapacağı bellidir. 
+//                //değişik algoritmalar geliştirilmiştir. Bir sonraki adım bellidir.
+//                Console.Write($"{face}, ");
+//            }
+//            Console.WriteLine(" ");
+//            Console.ReadKey();
+
+//        }
+//    }
+//}
+
+//ÖMER DOGU
+//1, 6, 2, 4, 2, 1, 2, 5, 4, 6, 2, 1, 4, 1, 3, 5, 6, 3, 6, 6, 2, 4, 1, 3, 2, 3, 6, 1, 4, 2, 1, 3, 1, 5, 4, 2, 2, 1, 6, 1, 3, 5, 2, 1, 3, 5, 4, 6, 3, 1, 6, 2, 5, 3, 1, 3, 5, 6, 3, 5, 1, 2, 1, 3, 6, 5, 1, 5, 3, 2, 4, 5, 3, 6, 3, 4, 3, 6, 6, 3, 6, 1, 4, 4, 2, 5, 5, 5, 5, 2, 4, 2, 4, 2, 6, 2, 4, 6, 1, 4,
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static int RollDice()
+        {
+            int d1 = randomNumbers.Next(1, 7); //first die roll
+            int d2 = randomNumbers.Next(1, 7); //second die roll 
+            int sum = d1 + d2;
+            Console.WriteLine($"Player rolled {d1} +{d2} = {sum}");
+            return sum;
+        }
+        private static Random randomNumbers = new Random();
+        private enum Status {Continue, Won, Lost}   //enum bizim daha önce ihtimalleri belli olan yapıları tanımladğım yapıdır. 
+        private enum DiceName
+        {
+            SnakeEyes=2, 
+            Trey=3,
+            Seven=7,
+            YoLeven=11,
+            BoxCars=12
+        }
+        static void Main(string[] args)
+        {
+            Status gameStatus = Status.Continue;
+            int myPoint = 0; //point if no win or loss on first roll  sıfır puanımz ar. 
+            int sumOfDice = RollDice(); //first roll of the dice. daha önce yazdğımız bir fornsiyon far. 
+
+            switch ((DiceName)sumOfDice)
+            {
+                case DiceName.Seven: //win with 7 of first roll   gelen sayı otomatik olarka sayı veriyor ve gelen ifade sayır. yukarıda tanımladı. 
+                case DiceName.YoLeven: //win with 11 on first roll
+                    gameStatus = Status.Won;
+                    break;
+                case DiceName.SnakeEyes: //lose wih 2 on first roll
+                case DiceName.BoxCars:
+                    gameStatus = Status.Lost;
+                    break;
+                default:
+                    gameStatus = Status.Continue;
+                    myPoint = sumOfDice;
+                    Console.WriteLine($"Point is {myPoint}");
+                    break;
+            }
+            while(gameStatus==Status.Continue)//win by making point
+            {
+                sumOfDice = RollDice();
+                if(sumOfDice==myPoint)
+                {
+                    gameStatus = Status.Won;
+                }
+                else
+                {
+                    if(sumOfDice==(int)DiceName.Seven)
+                    {
+                        gameStatus = Status.Lost;
+                    }
+                }
+
+            }
+
+                       
+            if(gameStatus==Status.Won)
+            {
+                Console.WriteLine("Player wins");
+
+            }
+            else
+            {
+                Console.WriteLine("Player loses.");
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+//}
+
+//Player rolled 5 +4 = 9
+//Point is 9
+//Player rolled 6 +1 = 7
+//Player loses.
+
+
+
+
+
+
+
+
+

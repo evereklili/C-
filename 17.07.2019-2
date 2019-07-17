@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             
+            Program cagirGelsinDayi=new Program();
+            cagirGelsinDayi.gelenElci();
+
+        }  //her şey bir sınıftır c# da. Her sınıfın iş yapan çeşitli elemanları vardır. Bunlara method veya yöntem diyeceğiz. 
+
+        //public void gelenElci()
+        //{
+        //    Console.WriteLine("Bir tuşa basınız.");
+        //    Console.ReadLine();
+        //    Console.WriteLine("Bir tuşa bastınız...");
+        //}
+
+
+        //public void gelenElci()
+        //{
+
+        //    //C# dilinde veriler ikiye ayrılır. Birincisi referans veri tipleri ikincisi ise değer tip şeklindedir. 
+        //    //C# da değişkenler, farklı veri tipleri saklayabildiğimiz yapıları tanımlama da kullanılan şeylerdir. 
+        //    /*
+        //     * Verinin üzerinde işlem yaptığı bölgeler: 
+        //     * 1.Stack bölgesi: RAM anlarız. Microişlemcide bulunan Stack Prointer vasıtasıyla doğrudan erişilebilinir. Stack Pointer o anda çalışan programın bellekte yerini tutan şeydir. 
+        //     * Bu noktada stack pointer tutulacak verinin boyutunu bilmek isteyecektir. İşte bunu da değişkenlerin başına yazılacak tiplerle belirleriz.
+        //     * 2.Heap alanı: RAM de bulunan bir hafıza alanıdır. Stactan farklı olarak, stack ayrılacak yer derleyici tarafından bilinmesi gerekirken, heap da bu alanın bilinmesine gerek yoktur. 
+        //     *  bu sayede programa büyük esneklik sağlamaktadır. new anahtar kelimesiyle bu iş akışını sağlarız. Hızı diğer stack mekanizmasına göre daha yavaştır.     
+        //     *  3.Register: Stack ve heap mekanizmasınına göre çok daha hızlıdır. Sebebi ise Regiser bölgesinde ikinci bir bellek olmamasıdır. Mikroişlemcileirin içinde ama cpu dışında yer alan sınırılı sayıda yapılardır. 
+        //     *  bu register yapılarına erişmek derleyicinin tamamen insiyatifinden olan bir şeydir. 
+        //     *  4.Static Bölge: Bellekteki herhangibir sabit bölgeyi temsil eder. Static verilerde tutulan veriler programın bütün çalışma süresince saklanır. static özelliğini vermek için 
+        //     *  "static" anahtar kelimesi kullanılır. 
+        //     * 5.Sabit Bölge: Sabit (constant) değerler genellikle program içine gömülü halde gelirler. Bu değerlerin değiştirilmesi mümkün değildir. 
+        //     * Sadece okuma amaçlı olduğundan dolayı sadece ROM tutulurlar. Read Only Memory. 
+        //     * 6.RAM Olmayan Bölge:Bellek bölgesini temsil etmeyen disk alanların temsil eder. 
+        //     * 
+        //     * */
+        //    //C# bir değişkene değer atayıncaya kadar kullanmamıza müdase etmez! 
+        //    int Ucret = 10;
+        //    const int UCRET=500;
+
+        //    Console.WriteLine(Ucret);
+        //    Console.WriteLine(UCRET);
+        //   /*
+        //    * Sabitlere tanımlandıkları değer atanır.ilk değer vermeden const yani sabitler sabit olmaz. 
+        //    * Sabit ifadelere ancak ilk ifade atanabilir. 
+        //    * sabit ifadeler static olduklarından ayrıca bir static yapmak hata verir. 
+        //    * 
+        //    * */
+
+        //}
+        public void gelenElci()
+        {
+            /*
+             * Değer tipleri, değişkenin değerlerini direk belleğe alır Referans tipler ise başka bir nesneye referans olarak kullanılırlar. 
+             *Yani referans tipler aslında bir kaç bellek bölgesi olan veri türlerini(bunlara kısaca nesne diyeceğiz)  
+             *adreslerini saklar. Değer tipleri yaratıldıklarında stack dediğimiz bellek bölgesinde oluşturulur, referans tipler ise kullanımı biraz daha sınırlı olan heap dediğimiz bellek bölgesinde saklanırlar. 
+             * 
+             */
+            int a = new int();
+            bool b = new bool();
+            char c = new char();
+            float f = new float();
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+            Console.WriteLine(d);
+        }
+
+    }
+
+
+}

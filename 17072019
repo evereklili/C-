@@ -1,0 +1,354 @@
+//////using System;
+
+//////namespace ConsoleApp7
+//////{
+//////    class Program
+//////    {
+//////        static void Main(string[] args)
+//////        {
+//////            Console.WriteLine("Tam sayıyı giriniz:");
+//////            int GirilenSayi;
+//////            GirilenSayi = Convert.ToInt32(Console.ReadLine());
+//////            if (GirilenSayi % 2 == 0)
+//////                Console.WriteLine(GirilenSayi + " çift sayıdır.");
+//////            else
+//////                Console.WriteLine(GirilenSayi + " tek sayıdır.");
+
+//////        }
+
+//////    }
+//////}
+/////*
+//// 1.Başla
+//// 2.Sayı oku
+//// 3. Eğer saı mod2=0 ise çift
+//// 4.Eğer sayı mod2=1 ise tekdir. 
+//// 5.sonucu yazdı. 
+//// 6.çıkış. 
+////    */
+
+//////using System;
+
+//////namespace omerdogu.com
+//////{
+//////    class Test_22   
+//////    {
+//////        static void Main(string[] args)
+//////        {
+//////            int toplam = 0;
+//////            int sayac=0;
+//////            Console.WriteLine("Tam sayıyı giriniz:");
+//////        x:
+//////            int GirilenSayi;
+//////            GirilenSayi = Convert.ToInt32(Console.ReadLine());
+//////            sayac += 1;
+//////            toplam = toplam + GirilenSayi;
+//////            if (sayac < 20)
+//////                goto x;
+//////            else
+//////                Console.WriteLine("Sayılarınızın toplamı:" + toplam);
+//////            Console.WriteLine("Program sonlanmıştır. ");
+
+//////        }
+
+//////    }
+//////}
+/////*
+//// * 1.Başla
+//// * 2. toplam ve sayac =0;
+//// * 3.Sayı oku, girilenSayi;
+//// * 4.sayac=sayac+1;
+//// * 5.toplam=toplam+girilenSayi;
+//// * 6.eğer sayac<=100
+//// * 7.yaz toplam 
+//// * 8.değilse 3.adıma git.
+//// * 9.bitiş
+////// * */
+
+
+//////using System;
+
+//////namespace omerdogu.com
+//////{
+//////    public class Toplama
+//////    {
+
+//////        public double IslemYap(double a, double b)
+//////        {
+//////            return a + b;
+//////        }
+//////    }
+//////    public class Cikarma
+//////    {
+
+//////        public double IslemYap(double a, double b)
+//////        {
+//////            return a - b;
+//////        }
+//////    }
+//////    public class Carpma
+//////    {
+
+//////        public double IslemYap(double a, double b)
+//////        {
+//////            return a * b;
+//////        }
+//////    }
+//////    public class Bolme
+//////    {
+
+//////        public double IslemYap(double a, double b)
+//////        {
+//////            if (a == 0 || b == 0)
+//////                return 0;
+//////            else
+//////                return a / b;
+//////        }
+//////    }
+//////    class Test_23
+//////    {
+
+//////        static void Main(string[] args)
+//////        {
+
+//////            Toplama gelenToplama = new Toplama();
+//////            Cikarma gelenCikarma = new Cikarma();
+//////            Carpma gelenCarpma = new Carpma();
+//////            Bolme gelenBolme = new Bolme();
+//////            Console.WriteLine("Lütfen işlem yapılacak sayıları giriniz: ");
+//////            Console.WriteLine("ilk sayıyı giriniz:");
+//////            double k = Convert.ToDouble(Console.ReadLine());
+//////            double l = Convert.ToDouble(Console.ReadLine());
+
+//////        baslangıc1:Console.WriteLine("Lütfen seçiminizi yapınız:");
+//////            Console.WriteLine("1- Toplama İşlemi :");
+//////            Console.WriteLine("2- Çıkarma İşlemi :");
+//////            Console.WriteLine("3- Çarpma İşlemi :");
+//////            Console.WriteLine("4- Bölme İşlemi :");
+//////            int secim = 0;
+//////            secim = Convert.ToInt32(Console.ReadLine());
+//////            if (secim > 4 && secim <= 0)
+//////            {
+//////                Console.WriteLine("Yanlış seçimi yaptınız...Tekrar deneyiniz...");
+//////                goto baslangıc1;
+
+//////            }
+//////            else if (secim == 1)
+//////                goto toplama;
+//////            else if (secim == 2)
+//////                goto cikarma;
+//////            else if (secim == 3)
+//////                goto carpma;
+//////            else if (secim == 4)
+//////                goto bolme;
+//////            else
+
+
+//////            // 152 120 131 100	209 273 149 74
+
+//////            toplama:
+//////            Console.WriteLine("İki sayının toplamı: " + gelenToplama.IslemYap(k, l));
+
+
+//////        cikarma:
+//////            Console.WriteLine("İki sayının toplamı: " + gelenCikarma.IslemYap(k, l));
+
+//////        carpma:
+//////            Console.WriteLine("İki sayının toplamı: " + gelenCarpma.IslemYap(k, l));
+
+//////        bolme:
+//////            Console.WriteLine("İki sayının toplamı: " + gelenToplama.IslemYap(k, l));
+
+
+
+
+//////        }
+
+//////    }
+//////}
+
+/////*
+//// * başla
+//// * 2.yaz 1 toplama
+//// * 3.yaz 2.çıkarma
+//// * 4.yaz 3.çaprma
+//// * 5.yaz 4 bölme
+//// * 6. sayı oku, işlem
+//// * 7.sayı oku, s1, s2,
+//// * 8.eğer işlem 1 ise sonuç s1+s2;
+//// * 9.eğer işlem 2 ise sonuç s1-s2
+//// * 10.eğer işlem 3 ise sonuç s1*s2
+//// * 11 eğer işlem 4 ise sonuç s1/s2 dir
+//// * 12.yaz, sonuç
+//// * 13. bitir. 
+//// * */
+
+
+////using System;
+////namespace omerdogu.com
+////{
+////    class Test_24
+////    {
+////        static void Main()
+////        {
+////            Console.WriteLine("Sayıyı giriniz:");
+////            int sayi;
+////            Console.WriteLine("Sayı girecek misiniz?");
+////            Console.WriteLine("Evet (e) veya Hayır (h) ");
+////            string girilenDeger = Convert.ToString(Console.ReadLine());
+////            if (girilenDeger == "E")
+////            {
+////                sayi = Convert.ToInt32(Console.ReadLine());
+////                int sayac , negatifSay , pozitifsay ;
+
+
+////            }
+////            else if (girilenDeger == "e")
+////            {
+
+////            }
+////            else if (girilenDeger == "H")
+////            {
+////                Environment.Exit(0);
+////            }
+////            else if (girilenDeger == "h")
+////            {
+////                Environment.Exit(0);
+////            }
+////            else
+////                Console.WriteLine("Program otomatik olarak sonlandırılmıştır. Ömer DOĞU");
+
+
+
+
+////        }
+////    }
+////}
+
+////using System;
+////namespace omerdogu.com
+////{
+////    class Test_26
+////    {
+////        public int no;
+////        public string adi, soyadi;
+
+
+////    }
+////    class Test_25
+////    {
+
+////        static void Main(string [] args)
+////        {
+////            Test_26 ogrenci1 = new Test_26();
+////            ogrenci1.no =    1085;
+////            ogrenci1.adi = "ömer ";
+////            ogrenci1.soyadi = "Doğu";
+////            Test_26 ogrenci2 = new Test_26();
+////            ogrenci2 = ogrenci1;  //Burada referans tip kullanarak ram üzerindeki aynı adreste tutulan bilgilere giriş yapıyoruz. Yani aynı sonuç ile farklı isimlendirme yapmaktayız. Bu işlemi tamamen bizim için c# arka planda yapmakta ve nesneler üzerinde çalışmaktadır. 
+////            ogrenci2.no = 1032;
+////            ogrenci2.adi = "Ahmet Şevki";
+////            ogrenci2.soyadi = "Höktem";
+////            Console.WriteLine("1.Öğrenci Numarası {0} :", ogrenci1.no);
+////            Console.WriteLine("1.Öğrenci Adı :", ogrenci1.adi);
+////            Console.WriteLine("1.Öğrenci Soyadı:", ogrenci1.soyadi);
+
+
+
+////        }
+////    }
+////}
+
+//using System;
+//namespace omerdogu.com
+//{
+
+//    class Test_27
+//    {
+
+//        static void Main(string[] args)
+
+
+//        }
+//    }
+//}
+
+//using System;
+//namespace omerdogu.com
+//{
+
+//    class Test_25
+//    {
+
+//        static void Main(string[] args)
+//        {
+//            //int a;
+//            //a = 3;
+//            //int b = 2;
+//            //b--;
+//            //a = b++;
+//            //Console.WriteLine(a);
+//            //Console.WriteLine(b);
+//            //Console.Write(a++);
+
+//            //int a;
+//            //a = 3;
+//            //a++; Console.WriteLine(a);
+//            //++a; Console.WriteLine(a);
+//            //Console.WriteLine(a++ * ++a);
+//            //a = 3;
+//            //Console.WriteLine(++a * ++a);
+//            //a = 3;
+//            //Console.WriteLine(a++ * a++);
+//            //a = 3;
+//            //Console.WriteLine(++a * a++);
+//            int aci1, aci2, aci3;
+//            Console.WriteLine("1.Açı Değeri:");
+//            aci1 = Convert.ToInt32(Console.ReadLine());
+//            aci2 = Convert.ToInt32(Console.ReadLine());
+//            aci3 = 180 - aci1 - aci2;
+//            Console.WriteLine("3.Açının Ölçüsü:{0} :",aci3);
+
+
+
+
+//        }
+
+
+//    }
+//}
+
+
+using System;
+namespace omerdogu.com
+{
+
+    class Test_26
+    {
+
+        static void Main(string[] args)
+        {
+
+            int[] ort = new int[3];
+            int notToplam = 0;
+            int ogrOrt = 0;
+            int[][,] dersOrtalama = new int[3][,];
+            dersOrtalama[1] = new int[4,1];
+            dersOrtalama[0] = new int[3, 2];
+            dersOrtalama[2] = new int[2,2];
+
+            for(int i=0;i<dersOrtalama.GetLength(0);i++)
+            {
+                for (int j = 0; j < dersOrtalama[i].GetLength(1); j++)
+                {
+                    for(i)
+                }
+            }
+
+
+
+        }
+
+
+    }
+}

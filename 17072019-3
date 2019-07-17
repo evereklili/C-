@@ -1,0 +1,142 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Test_1
+    {
+        //dizi bellekte ard arda yer alan aynı türden nesnelerin kümesine dizi(array) denir. 
+        //bir dizi içindeki elemanlara aynı değişken ismi ile farklı sıradaki sayılarla ulaşılır. 
+        //Elemanları ayırt edici özellik bellekteki yerleridir. 
+        //System.Arrays tanımlarız. İki şekilde dizi oluşturulur. Birincisi: 
+        /*
+         * i) int [] dizi=new int[25]
+         * ii) bildirim ve tanımalmanın ayrı satırlarda yapılmasıdır.   int [] dizi; 
+         * dizi=new int[25]
+         * int i=dizi[0] ile 1.diziye ulaşılır. 
+         * 
+         * 
+         * 
+         * 
+         * */
+         static void Main()
+        {
+            Test_1 geleniKarsila = new Test_1();
+            geleniKarsila.gelEyleme();
+
+        }
+
+        //public void gelEyleme()
+        //{
+        //    int[] dizi1 = new int[10];
+        //    bool[] dizi2 = new bool[10];
+        //    string[] dizi3 = new string[10];
+
+        //    for(int i=0;i<10;++i)
+        //    {
+        //        Console.Write("{0,5} ", dizi1[i]);
+        //        Console.Write("0,6} ", dizi2[i]);
+        //        Console.WriteLine("{0,5} ", dizi3[i]);
+
+
+        //    }
+        //}
+
+        //public void gelEyleme()
+        //{
+        //    //c# da c ve C++ farklı olarka dizinin çalışma anında dizinin boyutunu belirleyebiliriz. Örnek verecek olruska 
+        //    Console.WriteLine("Dinamik dizinin boyutu:");
+        //    int deger = Convert.ToInt32(Console.ReadLine());
+        //    int [] dizi = new int[deger];
+        //    double toplam = 0;
+        //    int ik=0;
+        //    for(int i=0;i<deger;i++)
+        //    {
+        //        Console.WriteLine(dizi[i]);
+        //        toplam = toplam + i;
+        //        ik = i;
+        //    }
+        //    Console.WriteLine(toplam / ik); 
+
+        //}
+        //public void gelEyleme()
+        //{
+        //    //Random rdn = new Random();
+        //int[] RastgeleDizi = new int[100];
+        //for(int i=0;i<100;++i)
+        //{
+        //    RastgeleDizi[i] = rdn.Next(1, 100);
+
+        //}
+        //int[] adet = new int[100];
+        //for(int i=0;i<100;++i)
+        //{
+        //    adet[RastgeleDizi[i] - 1]++;
+
+        //}
+        //for(int i=0; i<10;++i)
+        //{
+        //    Console.WriteLine("{0,2} Adet {1,2} ---> ", adet[i], i + 1);
+        //    for(int j=0;j<adet[i];++j)
+        //    {
+        //        Console.Write("*");
+        //    }
+        //    Console.WriteLine();
+
+
+        public void gelEyleme()
+        {
+
+            //int[] dizi = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //foreach (int eleman in dizi)
+            //    Console.Write("{0} ",eleman);
+            //read only şekinde hata ile karşılaşabilirsiniz. foreach sadece var olan dizinin içini okur değiştirmekz. 
+            //matris diziler.  genellikle bu dizilere matris yapısındadır. Şu şekilde tanımlanır. 
+
+            //int[,] dizis = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+            //for(int i=0;i<2;i++)
+            //{
+            //    Console.WriteLine(" Dizi {0,0}:", dizis[i, i]);
+
+            //}
+
+            int val = 15;
+            int[,] dizicik = new int[val, val];
+            for(int i=0;i<val;++i)
+                for(int j=0;j<val;j++)
+                {
+                    if(j==i)
+                    {
+                        dizicik[i, j] = 1;
+                        dizicik[i, (val - j - 1)]=1;
+                        
+.                    }
+                    if (i == val / 2)
+                        dizicik[i, j] = 1;
+                    if (j == val / 2)
+                        dizicik[i, j] = 1;
+
+                }
+            for (int i = 0; i < val; ++i)
+            {
+                for(int j=0;j<val;j++)
+                {
+                    if(dizicik[i,j]==1)
+                    {
+                        Console.WriteLine("2");
+                        
+                    }
+                    else
+                        Console.WriteLine(" ");
+
+                }
+            } Console.WriteLine();
+        }
+
+  
+ 
+    } 
+}

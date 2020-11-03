@@ -1,0 +1,158 @@
+#include<iostream>
+#include<string>
+#include<conio.h>
+#include<cmath>
+#include<ctime>
+#include<locale>
+#include<locale.h>
+#define MAX 100
+using namespace std;
+class Arac {
+	
+public:
+	string plaka;
+	string kisi_ad, kisi_soyad, kisi_tel;
+	time_t giris; //giris adında bir zaman degeri oluşturur. 
+
+}araba[MAX];
+
+class Otopark {
+public:
+	
+	string gorevli_id, gorevli_sifresi;
+	int i, gelir;
+	Otopark(string id, string s)
+	{
+		gorevli_id = id;
+		gorevli_sifresi = s;
+		gelir = 0; //toplam gelir 
+		i = -1; //indi için kullanılacak olan i degişkeni -1 atandı. 
+	} //yapıcı fonksiyon kullandık. 
+	void menu() // menu oluşturuyoruz. 
+	{
+		int secim; 
+		cout << "OTOPARK OTOMASYON PROGRAMI" << endl;
+		cout << "---------------------------" << endl;
+		cout << "1. Yeni Araç " << endl;
+		cout << "2. Araç Çıkışı" << endl;
+		cout << "3. Araç Listele" << endl;
+		cout << "4. Rapor" << endl;
+		cout << "5. Çıkış" << endl;
+		cin >> secim;
+		switch (secim)
+		{
+		case 1: { yeni(); break;  }
+		case 2: { cikar(); break;  }
+		case 3: { listele(); break;  }
+		case 4: { rapor(); break;  }
+		case 5: { exit(0); break;  }
+		default: {cout << "Hatalı seçim yaptınız sayın kullanıcı:" << endl; system("pause"); system("cls"); menu(); break; }
+		} //end switch secim
+	} //end menu prosedur
+	void yeni()
+	{
+		system("cls");
+		i++;
+		cout << "Araç Sahibinin Adı:"; cin >> araba[i].kisi_ad;
+		cout << "Araç Sahibinin:"; cin >> araba[i].kisi_soyad;
+		cout << "Araç Sahibinin Telefonu:"; cin >> araba[i].kisi_tel;
+		cout << "Araç Sahibinin Araç Plakası:"; cin >> araba[i].plaka;
+		cout << "İşleminiz başarı ile sonuçlandı." << endl;
+		time(&araba[i].giris);
+		system("pause"); system("cls");
+		menu();
+	} //end yeni function 
+
+	void cikar()
+	{
+		system("cls");
+		bool buldu = false;
+		int j = 0, k, saat;
+		double sure;
+		time_t cikis;
+		string plaka1;
+		time(&cikis); 
+		cout << "Araç Plakasını Giriniz:" << endl;
+		cin >> plaka1;
+		while (j <= i)
+		{
+			if (araba[j].plaka == plaka1)
+			{
+				sure = difftime(cikis, araba[j].giris);
+				for (k = j; k <= i; k++)
+				{
+					araba[k] = araba[k + 1];
+				}
+				i--;
+				buldu = true;
+				break;
+			}
+			j++;
+		}
+		if (buldu == true)
+		{
+			cout << "Plaka bulunamadı." << endl;
+			system("pause"); system("cls"); menu();
+		}
+		sure = sure / 3600;
+		saat = ceil(sure);
+		cout << "Ücret=" << saat * 5 << "TL" << endl;
+		gelir += saat * 5;
+		system("pause"); system("cls");  menu();
+	} //cikis function end; 
+	void listele()
+	{
+		system("cls"); // ekranı temizleyiniz. 
+		for (int j = 0; j <= i; j++)
+		{
+			cout << araba[j].plaka << endl;
+		}
+		system("pause"); //bir tuşa basılana kadar bekle 
+		system("cls"); //ekranı temizle
+		menu(); //menu fonksiyonuna işleme al. (bir nevi goto deyimi ile yanı işlevi yapmakttadır. 
+	} //listele fonction end; 
+	
+	void rapor()
+	{
+		system("cls");
+		cout << "Şuan ki Gelir Durumu:" << gelir << "TL" << endl;
+		system("pause"); //bir tuşa basılana kadar bekleyiniz. 
+		system("cls"); //ekranı temizleyiniz. 
+		menu(); //menu fonksiyonuna git. 
+	}
+};
+
+int main()
+{
+	setlocale(LC_ALL, "Turkish");
+	Otopark calisan("omerdogu", "omer");
+	string ad, sifre;
+	int i = 0;
+	cout << "OTOPARK OTOMASYON PROGRAMI" << endl;
+	while (1)
+	{
+		cout << "Kullanıcı Adınız:" << endl; cin >> ad;
+		cout << "Kullanıcı Şifreniz:" << endl; cin >> sifre;
+		setlocale(LC_ALL, "Turkish");
+		if (calisan.gorevli_id == ad) {
+			if (calisan.gorevli_sifresi == sifre)
+			{
+				setlocale(LC_ALL, "Turkish");
+				cout << "Şifre Doğrudur...!" << endl;
+				system("pause");
+				break;
+			}
+			setlocale(LC_ALL, "Turkish");
+			cout << "TEkrar deneyiniz...." << endl; system("pause");
+			system("cls");
+
+		}
+	}setlocale(LC_ALL, "Turkish");
+	system("cls"); setlocale(LC_ALL, "Turkish");
+	calisan.menu(); setlocale(LC_ALL, "Turkish");
+	system("pause"); setlocale(LC_ALL, "Turkish");
+	return 0;
+}
+
+
+//alıntıdır. 
